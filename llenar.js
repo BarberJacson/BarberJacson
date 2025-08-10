@@ -2,7 +2,7 @@
 const servicios = [
     {
         nombre: "corte moderno",
-        fotos: ["img/01.webp", "img/01.webp"],
+        fotos: ["img/01.webp", "img/03.jpg"],
         descripcion: "Corte profesional de cabello para hombre.",
         precio: 10
     },
