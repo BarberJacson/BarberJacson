@@ -49,6 +49,19 @@ body {
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
     position: relative;
     overflow: hidden;
+    animation: cardFadeIn 0.8s cubic-bezier(.4, 0, .2, 1);
+}
+
+@keyframes cardFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
 /* BORDES METÁLICOS */
@@ -145,6 +158,37 @@ body {
     z-index: 1;
 }
 
+/* Dots del carrusel */
+.servicio .fotos .dots {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    padding: 4px 8px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.servicio .fotos .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #9bb3d9;
+    box-shadow: 0 2px 8px #0051b822;
+    transition: transform 0.3s cubic-bezier(.4, 0, .2, 1), background 0.2s, box-shadow 0.3s;
+    opacity: 0.7;
+    border: 2px solid #fff;
+}
+
+.servicio .fotos .dot.active {
+    background: #0051b8;
+    transform: scale(1.5) rotate(360deg);
+    opacity: 1;
+    box-shadow: 0 0 0 4px #0051b822;
+}
 
 .servicio p:last-child {
     color: #0051b8;
@@ -152,30 +196,152 @@ body {
     font-size: 1.1rem;
 }
 
+/* ======== DISTINTIVO DE PRECIO ======== */
+.servicio-precio-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #0051b8 60%, #0099ff 100%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 18px;
+    padding: 6px 18px;
+    margin: 12px 0 0 0;
+    box-shadow: 0 2px 8px #0051b822;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    position: relative;
+    z-index: 2;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.servicio-precio-badge:hover {
+    background: linear-gradient(90deg, #0099ff 0%, #0051b8 100%);
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 4px 18px #0051b855;
+    filter: brightness(1.08) saturate(1.2);
+    transition: all 0.25s cubic-bezier(.4, 0, .2, 1);
+}
+
+.servicio-precio-badge::before {
+    content: '💈';
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
 /* ======== RESPONSIVE ======== */
 @media (max-width: 800px) {
     #servicios {
-        /* flex-direction: column; */
         align-items: center;
         padding: 20px 2vw;
     }
 
     .servicio {
-        width: 240vw;
+        width: 96vw;
         max-width: 99vw;
         margin: 0 auto 24px auto;
+        padding: 14px 2vw;
+        border-radius: 18px;
     }
 
     .servicio .fotos {
-        width: 240vw;
-        aspect-ratio: 1/1;
-        min-width: 0;
-        min-height: 0;
-        max-width: 70vw;
-        max-height: 98vw;
+        width: 88vw;
+        height: 88vw;
+        max-width: 96vw;
+        max-height: 96vw;
+        border-radius: 18px;
     }
 
     .servicio .fotos img {
-        /* Eliminados los tamaños fijos para mantener cuadrado */
+        border-radius: 14px;
     }
+
+    .servicio-precio-badge {
+        font-size: 1rem;
+        padding: 5px 12px;
+        margin-top: 8px;
+    }
+
+    #modal-imagen img {
+        max-width: 98vw;
+        max-height: 70vh;
+        border-radius: 12px;
+    }
+
+    #modal-imagen button {
+        width: 38px;
+        height: 38px;
+        font-size: 1.3rem;
+    }
+
+    .footer-barber {
+        padding: 18px 0 8px 0;
+        font-size: 0.98rem;
+    }
+
+    .footer-barber .footer-social {
+        gap: 28px;
+        margin-bottom: 6px;
+    }
+
+    .footer-barber .footer-social a {
+        font-size: 0;
+        display: inline-block;
+    }
+
+    .footer-barber .footer-social a img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-barber .footer-info {
+        font-size: 0.93em;
+        padding: 0 8px;
+        word-break: break-word;
+    }
+}
+
+/* ======== ESTILO DEL MODAL ======== */
+#modal-imagen {
+    background: linear-gradient(120deg, #222b 0%, #000c 100%);
+    backdrop-filter: blur(8px) saturate(1.2);
+    -webkit-backdrop-filter: blur(8px) saturate(1.2);
+    transition: opacity 0.2s;
+}
+
+/* ======== PIE DE PÁGINA ======== */
+.footer-barber {
+    background: linear-gradient(135deg, #b00000 0%, #ff2e2e 100%);
+    color: #fff;
+    text-align: center;
+    padding: 18px 0 8px 0;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    margin-top: 48px;
+    border-top: 3px solid #fff3;
+}
+
+.footer-barber .footer-social {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer-barber .footer-social a img {
+    width: 26px;
+    height: 26px;
+    filter: drop-shadow(0 2px 8px #0003);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.footer-barber .footer-social a:hover img {
+    transform: scale(1.18) rotate(-8deg);
+    filter: brightness(1.2) drop-shadow(0 4px 16px #0051b8aa);
+}
+
+.footer-barber .footer-info {
+    opacity: 0.92;
+    font-size: 0.98em;
+    margin-top: 2px;
 }
