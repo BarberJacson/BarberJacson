@@ -17,5 +17,11 @@ const servicios = [
         fotos: ["img/03.jpg", "img/03.jpg"],
         descripcion: "Tinte especial para barba, varios tonos disponibles.",
         precio: 120
-    }
+    },
+    {
+        nombre: "Taper",
+        fotos: ["img/04.webp", "img/05.jpg"],
+        descripcion: "Taper fade",
+        precio: 80
+    },
 ];
