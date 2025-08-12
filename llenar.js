@@ -1,27 +1,21 @@
 // Lista de servicios de la barbería
 const servicios = [
     {
-        nombre: "corte moderno",
-        fotos: ["img/01.webp", "img/03.jpg"],
-        descripcion: "Corte profesional de cabello para hombre.",
-        precio: 10
-    },
-    {
-        nombre: "Afeitado",
-        fotos: ["img/02.webp", "img/02.webp"],
-        descripcion: "Afeitado clásico con navaja y toalla caliente.",
-        precio: 100
-    },
-    {
-        nombre: "Tinte de barba",
-        fotos: ["img/03.jpg", "img/03.jpg"],
-        descripcion: "Tinte especial para barba, varios tonos disponibles.",
-        precio: 120
-    },
-    {
         nombre: "Taper",
-        fotos: ["img/04.webp", "img/05.jpg"],
+        fotos: ["img/01.jpg", "img/02.jpg",
+                "img/03.webp", "img/04.jpg",
+                "img/05.jpg", "img/06.jpg",
+                "img/09.jpg", "img/10.jpg",
+                "img/11.jpg",],
         descripcion: "Taper fade",
+        precio: 80
+    },
+    {
+        nombre: "low fade",
+        fotos: ["img/07.jpg", "img/08.jpg",
+                "img/03.webp", "img/04.jpg",
+                "img/05.jpg", "img/06.jpg",],
+        descripcion: "low fade",
         precio: 80
     },
 ];

@@ -119,11 +119,6 @@ window.addEventListener('DOMContentLoaded', function () {
         const div = document.createElement('div');
         div.className = 'servicio';
 
-        // Nombre
-        const nombre = document.createElement('h2');
-        nombre.textContent = servicio.nombre;
-        div.appendChild(nombre);
-
         // Foto principal (solo la primera)
         const fotosDiv = document.createElement('div');
         fotosDiv.className = 'fotos';
@@ -190,13 +185,18 @@ window.addEventListener('DOMContentLoaded', function () {
                 };
             });
         }
-
         div.appendChild(fotosDiv);
 
-        // Descripción
+        // Agrupar nombre y descripción en .servicio-info
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'servicio-info';
+        const nombre = document.createElement('h2');
+        nombre.textContent = servicio.nombre;
+        infoDiv.appendChild(nombre);
         const desc = document.createElement('p');
         desc.textContent = servicio.descripcion;
-        div.appendChild(desc);
+        infoDiv.appendChild(desc);
+        div.appendChild(infoDiv);
 
         // Precio
         const precio = document.createElement('span');

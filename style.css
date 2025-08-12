@@ -299,32 +299,28 @@ body {
         gap: 4px;
         padding-right: 4px;
         position: relative;
+        margin-left: 0;
     }
 
-    .servicio h2 {
+    .servicio-info h2 {
         color: #fff;
-        font-size: 1.13rem;
-        font-weight: 700;
+        font-size: 1.18rem;
+        font-weight: 800;
         margin: 0 0 2px 0;
-        letter-spacing: 0.5px;
-        text-shadow: 0 2px 8px #0008;
-        white-space: normal;
-        overflow: visible;
-        text-overflow: unset;
-        max-width: 100%;
-        line-height: 1.15;
-        word-break: break-word;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px #0051b8cc, 0 1px 0 #fff;
+        text-transform: capitalize;
+        font-family: 'Segoe UI', Arial, sans-serif;
     }
 
-    .servicio p {
-        color: #cfd8e3;
-        font-size: 1.01rem;
+    .servicio-info p {
+        color: #4fc3f7 !important;
+        font-size: 1.05rem;
+        font-weight: 600;
         margin: 0 0 6px 0;
-        font-weight: 400;
-        line-height: 1.35;
-        white-space: normal;
-        overflow-wrap: break-word;
-        text-shadow: 0 1px 4px #0006;
+        letter-spacing: 0.5px;
+        text-shadow: 0 1px 4px #0006, 0 1px 0 #fff;
+        font-family: 'Segoe UI', Arial, sans-serif;
     }
 
     .servicio-precio-badge {
