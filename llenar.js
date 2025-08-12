@@ -8,7 +8,7 @@ const servicios = [
                 "img/09.jpg", "img/10.jpg",
                 "img/11.jpg",],
         descripcion: "Taper fade",
-        precio: 80
+        precio: "C$80"
     },
     {
         nombre: "low fade",
@@ -16,6 +16,13 @@ const servicios = [
                 "img/03.webp", "img/04.jpg",
                 "img/05.jpg", "img/06.jpg",],
         descripcion: "low fade",
-        precio: 80
+        precio: "C$80"
+    },
+    {
+        nombre: "Mohicano",
+        fotos: ["img/02.jpg", "img/05.jpg",
+                "img/04.jpg"],
+        descripcion: "Mohicano",
+        precio: "C$80"
     },
 ];
