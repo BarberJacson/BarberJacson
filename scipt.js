@@ -221,3 +221,5 @@ window.addEventListener('DOMContentLoaded', function () {
         modalImg.src = modalFotos[modalCurrent];
     };
 });
+
+// and more here
